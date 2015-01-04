@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KQs-sE-HFR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Validate Receipt-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Validate Receipt" id="vXZ-lx-hvc" customClass="SetupViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9abbb12345c428abf4cc3b33423f660" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D02-oB-wr2" userLabel="iTunesSecret - Field">
+                                <rect key="frame" x="16" y="96" width="570" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="com.musicqubed.ios.mtv_nz.onetime.0" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9HZ-Fe-wig" userLabel="ProductId - Field">
+                                <rect key="frame" x="16" y="183" width="570" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-6w-JuD" userLabel="iTunesSecret - Label">
+                                <rect key="frame" x="16" y="68" width="570" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="iTunes Secret: ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Secret key is found inside your iTunes Connect In App Purchase section. ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwU-Ew-OJR" userLabel="ProductId - Label">
+                                <rect key="frame" x="16" y="135" width="570" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VH5-Oh-Ko5"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Product ID: ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Any product id setup for this application. Make sure it's status is ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ready to submit">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm7-th-LJT">
+                                <rect key="frame" x="16" y="221" width="570" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="KUP-TS-QAQ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="iOS 6 Style Receipts: ">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Only relevant for renewing subscription products. Is deprecated so prefer to use new version.">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8FL-hK-qGm">
+                                <rect key="frame" x="16" y="287" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-Od-dcM" userLabel="Validate - Button">
+                                <rect key="frame" x="244" y="550" width="113" height="30"/>
+                                <state key="normal" title="Validate Product">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="validateProductAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tu9-OB-R1p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D02-oB-wr2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="6bx-0O-TdY"/>
+                            <constraint firstItem="9HZ-Fe-wig" firstAttribute="trailing" secondItem="nwU-Ew-OJR" secondAttribute="trailing" id="EsF-vR-H92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ga8-6w-JuD" secondAttribute="trailing" constant="-2" id="KZt-Pe-U82"/>
+                            <constraint firstItem="lm7-th-LJT" firstAttribute="trailing" secondItem="9HZ-Fe-wig" secondAttribute="trailing" id="OpK-Vp-hbh"/>
+                            <constraint firstItem="8FL-hK-qGm" firstAttribute="top" secondItem="lm7-th-LJT" secondAttribute="bottom" constant="8" symbolic="YES" id="Pm5-WB-RmH"/>
+                            <constraint firstItem="ga8-6w-JuD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="4" id="XmM-tG-T3k"/>
+                            <constraint firstItem="lm7-th-LJT" firstAttribute="leading" secondItem="8FL-hK-qGm" secondAttribute="leading" id="bPm-5K-Ci0"/>
+                            <constraint firstItem="lm7-th-LJT" firstAttribute="leading" secondItem="9HZ-Fe-wig" secondAttribute="leading" id="drU-Ip-pDS"/>
+                            <constraint firstItem="nwU-Ew-OJR" firstAttribute="leading" secondItem="D02-oB-wr2" secondAttribute="leading" id="eRK-1Y-CSe"/>
+                            <constraint firstItem="9HZ-Fe-wig" firstAttribute="top" secondItem="nwU-Ew-OJR" secondAttribute="bottom" constant="8" id="frR-cS-p2l"/>
+                            <constraint firstItem="RsA-Od-dcM" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gGe-uu-cxo"/>
+                            <constraint firstItem="D02-oB-wr2" firstAttribute="trailing" secondItem="nwU-Ew-OJR" secondAttribute="trailing" id="k6a-4q-aCK"/>
+                            <constraint firstItem="ga8-6w-JuD" firstAttribute="leading" secondItem="D02-oB-wr2" secondAttribute="leading" id="lKS-UX-Ue6"/>
+                            <constraint firstItem="D02-oB-wr2" firstAttribute="trailing" secondItem="ga8-6w-JuD" secondAttribute="trailing" id="lY9-Nz-puX"/>
+                            <constraint firstItem="nwU-Ew-OJR" firstAttribute="leading" secondItem="9HZ-Fe-wig" secondAttribute="leading" id="nP6-UH-oHe"/>
+                            <constraint firstAttribute="bottom" secondItem="RsA-Od-dcM" secondAttribute="bottom" constant="20" symbolic="YES" id="qKo-R2-2xn"/>
+                            <constraint firstItem="nwU-Ew-OJR" firstAttribute="top" secondItem="D02-oB-wr2" secondAttribute="bottom" constant="9" id="uXG-pc-P8S"/>
+                            <constraint firstItem="lm7-th-LJT" firstAttribute="top" secondItem="9HZ-Fe-wig" secondAttribute="bottom" constant="8" symbolic="YES" id="xPk-PX-vzS"/>
+                            <constraint firstItem="D02-oB-wr2" firstAttribute="top" secondItem="ga8-6w-JuD" secondAttribute="bottom" constant="8" symbolic="YES" id="yzF-W5-HhC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Receipt Helper" id="TBX-zS-ulw"/>
+                    <connections>
+                        <outlet property="iTunesSecretField" destination="D02-oB-wr2" id="sMY-of-srA"/>
+                        <outlet property="productIDField" destination="9HZ-Fe-wig" id="GRy-Qg-zeC"/>
+                        <outlet property="useIOStyleReceiptSwitch" destination="8FL-hK-qGm" id="5Ah-Qf-brT"/>
+                        <outlet property="validateProductButton" destination="RsA-Od-dcM" id="9DP-1Z-bLk"/>
+                        <segue destination="OPt-GW-cuz" kind="show" identifier="showResults" id="pog-7q-3PF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="-376"/>
+        </scene>
+        <!--Validation Result-->
+        <scene sceneID="i8f-0r-tFG">
+            <objects>
+                <viewController id="OPt-GW-cuz" customClass="ValidatedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I0z-2P-0YY"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZb-Uw-11k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7yz-Lg-2XQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cs-bp-d2Q">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f00-Op-dL1">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="f00-Op-dL1" secondAttribute="bottom" id="7Uz-Ex-Hct"/>
+                                    <constraint firstItem="f00-Op-dL1" firstAttribute="top" secondItem="4Cs-bp-d2Q" secondAttribute="top" id="PuQ-gR-45G"/>
+                                    <constraint firstItem="f00-Op-dL1" firstAttribute="centerX" secondItem="4Cs-bp-d2Q" secondAttribute="centerX" id="dB3-ee-6db"/>
+                                    <constraint firstItem="f00-Op-dL1" firstAttribute="centerY" secondItem="4Cs-bp-d2Q" secondAttribute="centerY" id="eFy-lU-d9s"/>
+                                    <constraint firstAttribute="trailing" secondItem="f00-Op-dL1" secondAttribute="trailing" id="fgY-9S-8dU"/>
+                                    <constraint firstItem="f00-Op-dL1" firstAttribute="leading" secondItem="4Cs-bp-d2Q" secondAttribute="leading" id="lSa-uQ-ZgI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Cs-bp-d2Q" firstAttribute="leading" secondItem="7yz-Lg-2XQ" secondAttribute="leading" id="LaW-39-1Tt"/>
+                            <constraint firstItem="4Cs-bp-d2Q" firstAttribute="bottom" secondItem="DZb-Uw-11k" secondAttribute="top" id="aeh-cR-xpn"/>
+                            <constraint firstAttribute="trailing" secondItem="4Cs-bp-d2Q" secondAttribute="trailing" id="oWu-ux-9zo"/>
+                            <constraint firstItem="4Cs-bp-d2Q" firstAttribute="top" secondItem="7yz-Lg-2XQ" secondAttribute="top" id="zud-bH-IUk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Validation Result" id="NGD-a5-gwR">
+                        <barButtonItem key="rightBarButtonItem" title="Email" id="Kgp-bY-PkI">
+                            <connections>
+                                <action selector="emailResultAction:" destination="OPt-GW-cuz" id="3y2-1f-EDg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="validatedJSONTextView" destination="f00-Op-dL1" id="ZLy-4A-Beg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0O-hY-MvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801" y="-397"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BQL-BY-xoP">
+            <objects>
+                <navigationController id="KQs-sE-HFR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gDi-zg-PCM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="J97-Ze-fle"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="334-Oh-bsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="-612"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  ReceiptHelper
+
+  Created by alasdaiir on 02/01/2015.
+  Copyright (c) 2015 Musicqubed LTD. All rights reserved.
+*/
+"E100.description" = "User Unable To Make Payments";
+"E100.suggestion" = "Make sure user isn't underage or has other restrictions.";
+"E101.description" = "No Product IDs";
+"E101.suggestion" = "Make sure a product ID has been setup in iTunes connect.";
+"E102.description" = "User Cancelled";
+"E102.suggestion" = "What can I say, you cancelled the purchase.";
+"E103.description" = "Connection Error";
+"E103.suggestion" = "There was a connection failure between us and ITunes Connect servers.";
+"E104.description" = "Bad JSON";
+"E104.suggestion" = "Either poorly formed, or no, JSON was returned by ITunes Connect servers.";

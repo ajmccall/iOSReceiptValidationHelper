@@ -1,0 +1,12 @@
+
+/* Class = "IBUITextField"; text = "9abbb12345c428abf4cc3b33423f660"; ObjectID = "D02-oB-wr2"; */
+"D02-oB-wr2.text" = "9abbb12345c428abf4cc3b33423f660";
+
+/* Class = "IBUIButton"; normalTitle = "Validate Product"; ObjectID = "RsA-Od-dcM"; */
+"RsA-Od-dcM.normalTitle" = "Validate Product";
+
+/* Class = "IBUITextView"; text = "Receipt Validation Response Goes Here...."; ObjectID = "Siu-Vn-phq"; */
+"Siu-Vn-phq.text" = "Receipt Validation Response Goes Here....";
+
+/* Class = "IBUIViewController"; title = "Validation Success"; ObjectID = "siY-tb-ekx"; */
+"siY-tb-ekx.title" = "Validation Success";
