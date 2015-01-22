@@ -12,7 +12,6 @@ So save yourself the hassle and before running the application, open the termina
 
 ```
 ./script/config.sh <application bundle> <itunes secret> [product id]
-
 ```
 
 Where parameters are described as
