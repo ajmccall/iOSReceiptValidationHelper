@@ -2,8 +2,8 @@
   Localizable.strings
   ReceiptHelper
 
-  Created by alasdaiir on 02/01/2015.
-  Copyright (c) 2015 Musicqubed LTD. All rights reserved.
+  Created by ajmccall on 02/01/2015.
+  Copyright (c) 2015 AJMcCall LTD. All rights reserved.
 */
 "E100.description" = "User Unable To Make Payments";
 "E100.suggestion" = "Make sure user isn't underage or has other restrictions.";
@@ -17,3 +17,5 @@
 "E104.suggestion" = "Either poorly formed, or no, JSON was returned by ITunes Connect servers.";
 
 "email.body" = "\n\nValidated using ReceiptHelper.\nCheckout: http://git.io/aYodgA\nFollow: @aljmccall";
+"alert.noItunesSecretFound.title" = "Hold On Sonny Jim";
+"alert.noItunesSecretFound.message" = "You need to run a simple setup script before running this application.\n\nPlease review the README.md found in this project.";

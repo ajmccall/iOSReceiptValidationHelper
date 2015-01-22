@@ -2,7 +2,7 @@
 //  PurchaseController.m
 //  ReceiptHelper
 //
-//  Created by alasdaiir on 02/01/2015.
+//  Created by ajmccall on 02/01/2015.
 //
 
 #import "PurchaseController.h"
@@ -30,7 +30,7 @@ typedef void (^ITunesReceiptValidationResponse)(NSURLResponse *response, NSData 
 
 @end
 
-#pragma mark - MQPurchaseController IMPLEMENTATION
+#pragma mark - PurchaseController IMPLEMENTATION
 
 @implementation PurchaseController
 

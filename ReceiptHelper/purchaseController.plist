@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>iTunesSecret</key>
-	<string>9abbb398794c428abf4cc3b33423f660</string>
+	<string></string>
+	<key>productId</key>
+	<string></string>
 </dict>
 </plist>

@@ -2,8 +2,8 @@
 //  ViewController.m
 //  ReceiptHelper
 //
-//  Created by alasdaiir on 02/01/2015.
-//  Copyright (c) 2015 Musicqubed LTD. All rights reserved.
+//  Created by ajmccall on 02/01/2015.
+//  Copyright (c) 2015 AJMcCall LTD. All rights reserved.
 //
 
 #import "SetupViewController.h"
@@ -53,6 +53,13 @@
     self.purchaseController.delegate = self;
     
     self.iTunesSecretField.text = self.iTunesSecret;
+    self.productIDField.text = self.productId;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self alertIfNoITunesSecretIsFound];
 }
 
 #pragma mark - Custom Properties
@@ -67,7 +74,7 @@
 }
 
 - (NSString *)productId {
-    return self.productIDField.text;
+    return self.purchaseControllerConfig[@"productId"];
 }
 
 - (BOOL)useIOS6StyleReceipts {
@@ -78,12 +85,14 @@
 
 - (IBAction)validateProductAction:(id)sender {
     
+    NSString *productId = self.productIDField.text;
+    
     if(self.useIOStyleReceiptSwitch) {
         
-        [self.purchaseController validateIOS6StyleReceiptForProdcutID:self.productId];
+        [self.purchaseController validateIOS6StyleReceiptForProdcutID:productId];
     } else {
         
-        [self.purchaseController validateReceiptForProdcutID:self.productId];
+        [self.purchaseController validateReceiptForProdcutID:productId];
     }
  
     [self showProcessStarted];
@@ -136,6 +145,20 @@
                                delegate:nil
                       cancelButtonTitle:@"Got it"
                       otherButtonTitles:nil] show];
+}
+
+#pragma mark - Setup Alert
+
+- (void)alertIfNoITunesSecretIsFound {
+    
+    if(!self.iTunesSecret || [self.iTunesSecret isEqualToString:@""]) {
+    
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"alert.noItunesSecretFound.title", nil)
+                                    message:NSLocalizedString(@"alert.noItunesSecretFound.message", nil)
+                                   delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:nil] show];
+    }
 }
 
 

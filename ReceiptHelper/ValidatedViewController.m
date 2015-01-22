@@ -2,8 +2,8 @@
 //  ValidatedViewController.m
 //  ReceiptHelper
 //
-//  Created by alasdaiir on 02/01/2015.
-//  Copyright (c) 2015 Musicqubed LTD. All rights reserved.
+//  Created by ajmccall on 02/01/2015.
+//  Copyright (c) 2015 AJMcCall LTD. All rights reserved.
 //
 
 #import "ValidatedViewController.h"
