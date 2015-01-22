@@ -48,7 +48,9 @@ typedef void (^MailComposerCompleted)();
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
     [picker setSubject:@"Receipt Validation"];
+    [picker setMessageBody:NSLocalizedString(@"email.body", @"") isHTML:NO];
     [picker addAttachmentData:self.receiptValidationData mimeType:@"application/json" fileName:@"iTunesResponse"];
+    [picker addAttachmentData:self.receiptData mimeType:@"application/octet-stream" fileName:@"iTunesReceipt"];
     [self presentViewController:picker
                        animated:YES
                      completion:nil];

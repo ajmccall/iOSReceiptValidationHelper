@@ -15,3 +15,5 @@
 "E103.suggestion" = "There was a connection failure between us and ITunes Connect servers.";
 "E104.description" = "Bad JSON";
 "E104.suggestion" = "Either poorly formed, or no, JSON was returned by ITunes Connect servers.";
+
+"email.body" = "\n\nValidated using ReceiptHelper.\nCheckout: http://git.io/aYodgA\nFollow: @aljmccall";

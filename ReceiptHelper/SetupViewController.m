@@ -26,6 +26,9 @@
 @property (readonly, nonatomic) BOOL useIOS6StyleReceipts;
 
 @property (nonatomic, strong) PurchaseController *purchaseController;
+
+@property (nonatomic, strong) NSData *receiptData;
+@property (nonatomic, strong) NSData *receiptValidationResponseData;
 @end
 
 #pragma mark - ViewController IMPLEMENTATION
@@ -99,13 +102,17 @@
 #pragma mark - PurchaseControllerDelegate Methods
 
 - (void)purchaseController:(PurchaseController *)controller
-      validateSuccessfully:(NSData *)responseData {
+          validatedReciept:(NSData *)receiptData
+               andResponse:(NSData *)response {
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         
         [self showProcessEnded];
+        
+        self.receiptData = receiptData;
+        self.receiptValidationResponseData = response;
         [self performSegueWithIdentifier:@"showResults"
-                                  sender:responseData];
+                                  sender:self];
     }];
 }
 
@@ -114,7 +121,8 @@
     if([segue.destinationViewController isKindOfClass:[ValidatedViewController class]]) {
         
         ValidatedViewController *validatedViewController = (ValidatedViewController *)segue.destinationViewController;
-        validatedViewController.receiptValidationData = sender;
+        validatedViewController.receiptValidationData = self.receiptValidationResponseData;
+        validatedViewController.receiptData = self.receiptData;
     }
 }
 
@@ -126,7 +134,7 @@
     [[[UIAlertView alloc] initWithTitle:error.localizedDescription
                                 message:error.localizedRecoverySuggestion
                                delegate:nil
-                      cancelButtonTitle:@"Thanks"
+                      cancelButtonTitle:@"Got it"
                       otherButtonTitles:nil] show];
 }
 

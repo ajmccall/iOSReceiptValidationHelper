@@ -25,7 +25,11 @@
 
 @protocol PurchaseControllerDelegate <NSObject>
 
-- (void)purchaseController:(PurchaseController *)controller validateSuccessfully:(NSData *)responseData;
-- (void)purchaseController:(PurchaseController *)controller failedWithError:(NSError *)error;
+- (void)purchaseController:(PurchaseController *)controller
+          validatedReciept:(NSData *)receiptData
+               andResponse:(NSData *)response;
+
+- (void)purchaseController:(PurchaseController *)controller
+           failedWithError:(NSError *)error;
 
 @end

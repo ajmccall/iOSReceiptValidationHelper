@@ -11,5 +11,6 @@
 @interface ValidatedViewController : UIViewController
 
 @property (nonatomic, strong) NSData *receiptValidationData;
+@property (nonatomic, strong) NSData *receiptData;
 
 @end

@@ -189,19 +189,19 @@ typedef void (^ITunesReceiptValidationResponse)(NSURLResponse *response, NSData 
 - (void)validateReceipt:(SKPaymentTransaction *)transaction {
     
     NSError *error;
-    NSData *requestData = [self receiptValidationDataUsingTransaction:transaction
-                                                                error:&error];
+    NSData *requestData = [self receiptDataFromTransaction:transaction
+                                                     error:&error];
     
     if (error) {
         [self.delegate purchaseController:self failedWithError:error];
     } else {
-        [self sendToSandboxServerNodyData:requestData];
+        [self sendToSandboxServerReceiptData:requestData];
     }
 }
 
 #pragma - Receipt Data Creation
 
-- (NSData *)receiptValidationDataUsingTransaction:(SKPaymentTransaction *)transaction error:(NSError **)error {
+- (NSData *)receiptDataFromTransaction:(SKPaymentTransaction *)transaction error:(NSError **)error {
     
     NSString *receiptBase64 = [self base64EncodedReceiptUsingTransaction:transaction];
     
@@ -243,15 +243,15 @@ typedef void (^ITunesReceiptValidationResponse)(NSURLResponse *response, NSData 
 
 #pragma mark -
 
-- (void)sendToSandboxServerNodyData:(NSData *)bodyData {
+- (void)sendToSandboxServerReceiptData:(NSData *)receiptData {
     
-    NSURLRequest *storeRequest = [self storeRequestWithBodyData:bodyData];
+    NSURLRequest *storeRequest = [self storeRequestWithBodyData:receiptData];
     
     // Make a connection to the iTunes Store on a background queue.
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:storeRequest
                                        queue:queue
-                           completionHandler:[self requestResponseCallback]];
+                           completionHandler:[self requestResponseCallback:receiptData]];
 }
 
 - (NSURLRequest *)storeRequestWithBodyData:(NSData *)bodyData {
@@ -265,7 +265,7 @@ typedef void (^ITunesReceiptValidationResponse)(NSURLResponse *response, NSData 
     return storeRequest;
 }
 
-- (ITunesReceiptValidationResponse)requestResponseCallback {
+- (ITunesReceiptValidationResponse)requestResponseCallback:(NSData *)receiptData {
     
     return ^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         
@@ -274,18 +274,7 @@ typedef void (^ITunesReceiptValidationResponse)(NSURLResponse *response, NSData 
             [self.delegate purchaseController:self failedWithError:self.connectionError];
         } else {
             
-
-            [self.delegate purchaseController:self validateSuccessfully:data];
-            
-//            NSError *error;
-//            NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-//            if (error) {
-//                
-//                [self.delegate purchaseController:self failedWithError:error];
-//            } else {
-//                
-//                [self.delegate purchaseController:self validateSuccessfully:jsonResponse];
-//            }
+            [self.delegate purchaseController:self validatedReciept:receiptData andResponse:data];
         }
     };
 }
